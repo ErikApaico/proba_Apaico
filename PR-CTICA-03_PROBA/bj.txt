@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{wasysym}
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{enumerate}
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+
+\vspace*{-1.5in}
+
+{\fontsize{14}{15}\bf \selectfont UNIVERSIDAD NACIONAL DE SAN CRISTOBAL DE HUAMANGA}\\
+
+\vspace*{0.5cm}
+
+{\fontsize{12}{15}\bf \selectfont FACULTAD DE INGENIERÍA DE MINAS, GEOLOGÍA Y CIVIL\\ }
+
+\vspace*{0.15in} ESCUELA DE FORMACIÓN PROFESIONAL CIENCIAS FÍSICO MATEMÁTICAS \\
+
+\vspace*{0.2in}
+
+\begin{figure}[htb]
+
+\begin{center}
+
+\includegraphics[width=4.5cm,height=6.5cm]{unsch.jpg}
+
+\end{center}
+
+\end{figure}
+
+\begin{Large}
+
+\textbf{CÁLCULO DE PROBABILIDAD }\\
+
+
+
+\end{Large}
+
+\vspace*{0.3in}
+
+\begin{large}
+
+RESOLUCIÓN DE EJERCICIOS\\
+
+\rule{20mm}{0.1mm}
+
+$\capricornus\pisces$ %Para que salga figuras de los signos Zodiacos utiliza este paquete %“\usepackage{wasysym} %para figuras especiales”
+
+\rule{20mm}{0.1mm}
+
+\end{large}
+
+\vspace*{0.3in}
+
+\vspace*{0.1in}
+
+\end{center}
+
+\begin{flushleft}
+{\bf PROFESOR:} Jackson Macoy Romero Plasencia\\
+\vspace*{0.2in}
+
+{\bf ALUMNO:} Apaico Alvarado Erik Orlando\\
+
+
+\end{flushleft}
+
+\begin{center}
+
+\begin{large}
+
+\vspace*{0.50in}
+
+Ayacucho-Peru\\
+
+{\bf (2019)}
+
+\end{large}
+
+
+
+
+
+\title{Hoja de práctica 3\\
+       \fntb{Resolución}
+       }
+
+\date{}
+\begin{document}
+\begin{enumerate}
+\maketitle
+\setcounter{enumi}{0}
+\item  Durante el mes de noviembreb la probabilidad de lluvia es de  0,3. El Fluminense gana un partido en un dia con lluvia con probabilidad  0,4; en un dia sin lluvia con probabilidad 0,6. Si ganó un partido en noviembre, ¿ cuál es la probabilidad que haya llovido ese dia?\\
+{\bf Solución:} \\
+$C$: lluvia en el mes de noviembre\\
+$F|C$: Fluminense gana un partido en un dia con lluvia\\
+$P(C)=0,3 ; P(F|C)=0,4$\\
+\\
+\\
+$P(C|F)=\frac{P(C)P(F|C)}{P(C)P(F|C)+P(C^c)P(F|C^c)}=\frac{(0,3)(0,4)}{(0,3)(0,4)+(0,7)(0,6)}=0,222$
+
+
+
+\item Pedro quiere enviar una carta a Marina, La probabilidad de que Pedro escriba la carta es 0,8. La probabilidad de que el correo no la pierda es 0,9. La probabilidad de que el cartero  la entregue es 0,9. Dado que Marina no recibió la carta, ¿cuál es la probabilidad de que Pedro no  haya escrito?\\
+{\bf Solución:} \\
+
+$p:Pedro$\\
+$C:correo$\\
+$c:cartero$\\
+$M: Marina recibe la carta$\\
+$P(p)=0,8$\\
+$P(C)=0,9$\\
+$P(c)=0,9$\\
+$P(M)=(0,8)(0,9)(0,9)=0,648$\\
+$P(p\cap M)=P(p\cap|p\cap C\cap c)=0,648$
+$P(p^c|M^c)=\frac{P(p^c\cap M^c)}{M^c}=\frac{1-P(p\bigcup M)}{1-P(M)}$
+$=\frac{1-[P(p)+P(M)-P(p\cap M)]}{1-P(M)}= \frac{(1)-(0,8)-(0,648)+(0,648)}{1-0,648}=\frac{0,2}{0,352}=0,568$
+
+\item Sean $A-1,...,A_n$  eventos aleatorios independientes, con $p_k=P(A_n), k=1,...,n$. Obtenga la probabilidad de ocurrencia de los siguientes eventos en términos de las probabilidades $p_k$.\\
+ (a) La ocurrencia de ninguno de los $A_k$\\
+ (b) La ocurrencia de por lo menos uno de los $A_k$\\
+ (c) La ocurrencia de exactamente uno de los $A_k$\\
+ (d) La ocurrencia de exactamente dos de los $A_k$\\
+ (e) La ocurrencia de todos los $A_k$\\
+ (f) La ocurrencia de, como máximo, $n-1$ de los $A_k$\\
+{\bf Solución (a):} \\
+$P(A^c_1\cap A^c_2 \cap...\cap A^c_n)$
+$=P(\left\displaystyle\bigcap_{k=1}^n{A^c_k) \right $
+$=\displaystyle\prod_{k=1}^{n}P\left(A^c_{k}\right)$\\
+$=\displaystyle\prod_{k=1}^{n}(1-P\left(A_{k}\right))$\\
+{\bf Solución (b):} \\
+$1-P(\left\displaystyle\bigcap_{k=1}^n{A^c_k) \right $
+$=1-\displaystyle\prod_{k=1}^{n}(1-P\left(A_{k}\right))$\\
+{\bf Solución (c):} \\
+$P(\{A_1\cap [\left\displaystyle\bigcap_{k=2}^n{A^c_k}] \}\cup \{A_2\cap [\left\displaystyle\bigcap_{k=1,k\neq 2}^n{A^c_k}] \}\cup ... \cup {A_n\cap [\left\displaystyle\bigcap_{k=1,k\neq n}^n{A^c_k}] \}) \right  $\\
+$=P_1\displaystyle\prod_{k=1,k\neq1}^{n}(1-P\left(A_{k}\right))+..+P_n\displaystyle\prod_{k=1,k\neq n}^{n}(1-P\left(A_{k}\right))$\\
+$=\displaystyle\sum_{j=1}^{n}P_j\displaystyle\prod_{k=1,k\neq j}^{n}(1-P\left(A_{k}\right)) $\\
+{\bf Solución (d):} \\
+$\displaystyle\sum_{1\leq i \leq j \leq n}^{n}P_jP_i\displaystyle\prod_{k=1,k\neq j, k\neq i}^{n}(1-P\left(A_{k}\right)) $\\
+{\bf Solución (e):} \\
+$P(A_1\cap A_2 \cap...\cap A_n)$
+$=P(\left\displaystyle\bigcap_{k=1}^n{A_k) \right $
+$=\displaystyle\prod_{k=1}^{n}P\left(A_{k}\right)$\\
+
+
+
+\end{enumerate}
+\end{document}
